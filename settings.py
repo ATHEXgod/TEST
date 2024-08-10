@@ -7,4 +7,4 @@ MONGO_DB_URI = os.getenv('MONGO_DB_URI', 'your_default_mongo_uri')  # Set your M
 PAYMENT_FEATURE_ENABLED = os.getenv('PAYMENT_FEATURE_ENABLED', 'False').lower() == 'true'  # Set to True or False
 # config/settings.py
 
-OWNER_ID = 123456789  # Replace with the actual Telegram user ID
+OWNER_ID = 20478027  # Replace with the actual Telegram user ID

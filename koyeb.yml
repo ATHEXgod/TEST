@@ -1,0 +1,14 @@
+name: file-sharing-token-bot
+services:
+  - name: bot-service
+    image:
+      dockerfile_path: ./Dockerfile
+    env:
+      TELEGRAM_BOT_API_TOKEN: 'your_actual_bot_token'  # Replace with your actual bot token
+      RAZORPAY_KEY_ID: 'your_actual_key_id'  # Replace with your actual Razorpay key ID
+      RAZORPAY_KEY_SECRET: 'your_actual_key_secret'  # Replace with your actual Razorpay key secret
+      MONGO_DB_URI: 'your_actual_mongo_uri'  # Replace with your actual MongoDB URI
+      PAYMENT_FEATURE_ENABLED: 'false'  # Set to 'true' to enable or 'false' to disable
+    ports:
+      - port: 80
+        protocol: HTTP

@@ -16,3 +16,15 @@ def add_subscription(user_id, days):
         {"$set": {"expiry_date": expiry_date}},
         upsert=True
     )
+# bot/subscription_manager.py
+
+def set_role(user_id, role):
+    roles.update_one(
+        {"user_id": user_id},
+        {"$set": {"role": role}},
+        upsert=True
+    )
+
+def get_role(user_id):
+    user = roles.find_one({"user_id": user_id})
+    return user['role'] if user else None
